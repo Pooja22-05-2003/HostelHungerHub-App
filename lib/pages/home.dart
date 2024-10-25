@@ -1,3 +1,4 @@
+import 'package:catalog_app/pages/details.dart';
 import 'package:flutter/material.dart';
 import 'package:catalog_app/widget/widget_support.dart';
 
@@ -50,28 +51,34 @@ class _HomeState extends State<Home> {
 
             SingleChildScrollView(
               scrollDirection: Axis.horizontal,
-              child: Row(children:[
-                Container(
-                  margin: EdgeInsets.all(6),
-                  child: Material(
-                    elevation: 5.0,
-                    borderRadius: BorderRadius.circular(20),
-                    child: Container(
-                      padding: EdgeInsets.all(10),
-                      
-                      child:Column(
-                      crossAxisAlignment:CrossAxisAlignment.start,
-                        children:[
-                        Image.asset("images/salad2.png", height:150, width:150,fit:BoxFit.cover),
-                        Text("Vegie Taco Hash", 
-                      style: AppWidget.SemiBoldTextFieldStyle()),
-                      SizedBox(height: 5.0,),
-                      Text("Fesh and Healthy", 
-                      style: AppWidget.LightTextFieldStyle()),
-                      SizedBox(height: 5.0,),
-                      Text("₹25",style:AppWidget.SemiBoldTextFieldStyle(),)
-                      ],),
-                      ),
+              child: Row(
+                children:[
+                GestureDetector(
+                  onTap:(){
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=> Details()),);
+                  },
+                  child: Container(
+                    margin: EdgeInsets.all(6),
+                    child: Material(
+                      elevation: 5.0,
+                      borderRadius: BorderRadius.circular(20),
+                      child: Container(
+                        padding: EdgeInsets.all(10),
+                        
+                        child:Column(
+                        crossAxisAlignment:CrossAxisAlignment.start,
+                          children:[
+                          Image.asset("images/salad2.png", height:150, width:150,fit:BoxFit.cover),
+                          Text("Vegie Taco Hash", 
+                        style: AppWidget.SemiBoldTextFieldStyle()),
+                        SizedBox(height: 5.0,),
+                        Text("Fesh and Healthy", 
+                        style: AppWidget.LightTextFieldStyle()),
+                        SizedBox(height: 5.0,),
+                        Text("₹25",style:AppWidget.SemiBoldTextFieldStyle(),)
+                        ],),
+                        ),
+                    ),
                   ),
                 ),
                 SizedBox(

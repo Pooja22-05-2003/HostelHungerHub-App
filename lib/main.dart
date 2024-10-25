@@ -1,5 +1,6 @@
 import 'package:catalog_app/pages/bottomnav.dart';
 import 'package:catalog_app/pages/home.dart';
+import 'package:catalog_app/pages/login.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -13,7 +14,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home:BottomNav(),
+      home:LogIn(),
     );
   }
 }
