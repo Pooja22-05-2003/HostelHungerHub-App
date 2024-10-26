@@ -1,10 +1,16 @@
+import 'package:catalog_app/pages/SignUp.dart';
 import 'package:catalog_app/pages/bottomnav.dart';
 import 'package:catalog_app/pages/home.dart';
 import 'package:catalog_app/pages/login.dart';
+import 'package:catalog_app/pages/onboard.dart';
+// import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(const MyApp());
+Future<void> main() async {
+  // WidgetsFlutterBinding.ensureInitialized();
+  // Stripe.publishableKey = publishableKey;
+  // await Firebase.initializeApp();
+  // runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -14,7 +20,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home:LogIn(),
+      home:Onboard(),
     );
   }
 }
